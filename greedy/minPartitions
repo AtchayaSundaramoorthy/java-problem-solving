@@ -1,0 +1,13 @@
+class Solution {
+    public int minPartitions(String n) {
+       int len=n.length();
+        char max='0';
+        int i;
+        for(i=0;i<len;i++)
+        {
+            if(n.charAt(i)>max)
+              max=n.charAt(i);
+        }
+        return max-48;  
+    }
+}
