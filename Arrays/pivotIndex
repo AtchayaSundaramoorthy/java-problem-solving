@@ -1,0 +1,22 @@
+class Solution {
+    public int pivotIndex(int[] nums) {
+      int[] prefix_sum = new int[nums.length];
+      int[] suffix_sum = new int[nums.length];
+      int ind;
+      for(ind=1;ind<nums.length;ind++)
+      {
+        prefix_sum[ind]=prefix_sum[ind-1]+nums[ind-1];
+      }
+      for(ind=nums.length-2;ind>=0;ind--)
+      {
+        suffix_sum[ind]=suffix_sum[ind+1]+nums[ind+1];
+      }
+      int pivot;
+      for(pivot=0;pivot<nums.length;pivot++)
+      {
+        if(prefix_sum[pivot]==suffix_sum[pivot])
+            return pivot;
+      }
+      return -1;  
+    }
+}
