@@ -1,0 +1,20 @@
+class Solution {
+    public int divisorSubstrings(int num, int k) {
+        int place = (int)Math.pow(10,k);
+        int org = num;
+        int ctr=0;
+        while(num>=(place/10))
+        {
+            int part = num%place;
+            if(part>0)
+            {
+                if(org%part==0)
+                {
+                    ctr++;
+                }
+            }
+            num=num/10;
+        }
+        return ctr;
+    }
+}
