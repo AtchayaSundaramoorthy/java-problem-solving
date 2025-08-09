@@ -1,0 +1,31 @@
+/**
+ * Problem: Maximum Subarray (LeetCode)
+ * Difficulty: Medium
+ * 
+ * Approach:
+ * - Use Kadane's Algorithm.
+ * - Maintain a running sum of the subarray.
+ * - Reset sum to 0 if it becomes negative (since it won't help in maximizing).
+ * - Track the maximum sum encountered.
+ * 
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
+ */
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int n = nums.length;
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
+            max = Math.max(sum, max);
+            if (sum < 0) {
+                sum = 0;
+            }
+        }
+
+        return max;
+    }
+}
