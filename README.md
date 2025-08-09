@@ -8,6 +8,9 @@ This repository contains my Java solutions to various programming challenges fro
 - Math & Number Theory
 - Dynamic Programming
 - Stack & Parentheses Problems
+- Linked List
+- Sliding Window
+- Greedy
 
 ## Platforms
 - Leetcode
