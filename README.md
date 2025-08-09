@@ -10,7 +10,7 @@ This repository contains my Java solutions to various programming challenges fro
 - Stack & Parentheses Problems
 
 ## Platforms
-- [LeetCode](https://leetcode.com/)
+- Leetcode
 
 ## Stats
 - 50+ problems solved in Java
